@@ -1,9 +1,10 @@
 import pandas as pd
 import requests
 
-url = "https://old.west.albion-online-data.com/api/v2/stats/prices/t4_bag,t4_bag@1,t4_bag@2,t4_bag@3,t4_bag@4,t5_bag,t6_bag,t7_bag,t8_bag"
+url = "https://old.west.albion-online-data.com/api/v2/stats/prices/t4_bag,t4_bag@1,t4_bag@2,t4_bag@3,t4_bag@4,t5_bag,t5_bag@1,t5_bag@2,t5_bag@3,t5_bag@4,t6_bag,t6_bag@1,t6_bag@2,t6_bag@3,t6_bag@4,t7_bag,t7_bag@1,t7_bag@2,t7_bag@3,t7_bag@4,t8_bag,t8_bag@1,t8_bag@2,t8_bag@3,t8_bag@4"
 
 params = {
+    ''
     "locations": "Bridgewatch, Lymhurst, Caerleon, Thetford, Martlock, Fort Sterling, Black Marketing",
     "qualities": "1,2,3,4"
 }
