@@ -1,7 +1,15 @@
 import pandas as pd
 import requests
+import json
 
-url = "https://old.west.albion-online-data.com/api/v2/stats/prices/t4_bag,t4_bag@1,t4_bag@2,t4_bag@3,t4_bag@4,t5_bag,t5_bag@1,t5_bag@2,t5_bag@3,t5_bag@4,t6_bag,t6_bag@1,t6_bag@2,t6_bag@3,t6_bag@4,t7_bag,t7_bag@1,t7_bag@2,t7_bag@3,t7_bag@4,t8_bag,t8_bag@1,t8_bag@2,t8_bag@3,t8_bag@4"
+arquivo_json = 'items.json'
+
+with open(arquivo_json, 'r') as file:
+    dados_itens = json.load(file)
+
+item_ids = [item["item_id"] for item in dados_itens["items"]]
+
+url = f"https://old.west.albion-online-data.com/api/v2/stats/prices/{','.join(item_ids)}"
 
 params = {
     ''
