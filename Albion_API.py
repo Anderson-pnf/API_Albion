@@ -5,8 +5,7 @@ url = "https://old.west.albion-online-data.com/api/v2/stats/prices/t4_bag,t4_bag
 
 params = {
     "locations": "Bridgewatch, Lymhurst, Caerleon, Thetford, Martlock, Fort Sterling, Black Marketing",
-    "qualities": "1,2,3,4",
-    "enchantment": "1,2,3,4"
+    "qualities": "1,2,3,4"
 }
 
 response = requests.get(url, params=params)
